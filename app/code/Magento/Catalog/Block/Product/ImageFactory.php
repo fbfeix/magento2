@@ -114,7 +114,7 @@ class ImageFactory
      * @param string $imageType
      * @return string
      */
-    private function getLabel(Product $product, string $imageType): string
+    private function getLabel(Product $product, ?string $imageType = null): string
     {
         $label = $product->getData($imageType . '_' . 'label');
         if (empty($label)) {
